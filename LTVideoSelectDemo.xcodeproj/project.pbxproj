@@ -15,6 +15,11 @@
 		FB2DD7572047E3AC004269E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DD7562047E3AC004269E2 /* main.m */; };
 		FB2DD7612047E3AC004269E2 /* LTVideoSelectDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DD7602047E3AC004269E2 /* LTVideoSelectDemoTests.m */; };
 		FB2DD76C2047E3AC004269E2 /* LTVideoSelectDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DD76B2047E3AC004269E2 /* LTVideoSelectDemoUITests.m */; };
+		FB2DD7852047E3E8004269E2 /* LTVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FB2DD7832047E3E8004269E2 /* LTVideoModel.m */; };
+		FB4A5F85204D6B5C0083F99D /* LTVideoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A5F84204D6B5B0083F99D /* LTVideoListViewController.m */; };
+		FB4A5F89204D6B710083F99D /* LTVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A5F86204D6B700083F99D /* LTVideoCollectionViewCell.m */; };
+		FB4A5F8A204D6B710083F99D /* LTVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4A5F87204D6B710083F99D /* LTVideoCollectionViewCell.xib */; };
+		FB4A5F8C204E41240083F99D /* LTVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A5F8B204E41240083F99D /* LTVideoManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,15 @@
 		FB2DD7672047E3AC004269E2 /* LTVideoSelectDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTVideoSelectDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2DD76B2047E3AC004269E2 /* LTVideoSelectDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTVideoSelectDemoUITests.m; sourceTree = "<group>"; };
 		FB2DD76D2047E3AC004269E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB2DD7812047E3E8004269E2 /* LTVideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoModel.h; sourceTree = "<group>"; };
+		FB2DD7822047E3E8004269E2 /* LTVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoManager.h; sourceTree = "<group>"; };
+		FB2DD7832047E3E8004269E2 /* LTVideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoModel.m; sourceTree = "<group>"; };
+		FB4A5F83204D6B5B0083F99D /* LTVideoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoListViewController.h; sourceTree = "<group>"; };
+		FB4A5F84204D6B5B0083F99D /* LTVideoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoListViewController.m; sourceTree = "<group>"; };
+		FB4A5F86204D6B700083F99D /* LTVideoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoCollectionViewCell.m; sourceTree = "<group>"; };
+		FB4A5F87204D6B710083F99D /* LTVideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTVideoCollectionViewCell.xib; sourceTree = "<group>"; };
+		FB4A5F88204D6B710083F99D /* LTVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoCollectionViewCell.h; sourceTree = "<group>"; };
+		FB4A5F8B204E41240083F99D /* LTVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +115,14 @@
 		FB2DD7462047E3AC004269E2 /* LTVideoSelectDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FB2DD77F2047E3E8004269E2 /* LTVideoManager */,
 				FB2DD7472047E3AC004269E2 /* AppDelegate.h */,
 				FB2DD7482047E3AC004269E2 /* AppDelegate.m */,
+				FB4A5F83204D6B5B0083F99D /* LTVideoListViewController.h */,
+				FB4A5F84204D6B5B0083F99D /* LTVideoListViewController.m */,
+				FB4A5F88204D6B710083F99D /* LTVideoCollectionViewCell.h */,
+				FB4A5F86204D6B700083F99D /* LTVideoCollectionViewCell.m */,
+				FB4A5F87204D6B710083F99D /* LTVideoCollectionViewCell.xib */,
 				FB2DD74A2047E3AC004269E2 /* ViewController.h */,
 				FB2DD74B2047E3AC004269E2 /* ViewController.m */,
 				FB2DD74D2047E3AC004269E2 /* Main.storyboard */,
@@ -130,6 +150,17 @@
 				FB2DD76D2047E3AC004269E2 /* Info.plist */,
 			);
 			path = LTVideoSelectDemoUITests;
+			sourceTree = "<group>";
+		};
+		FB2DD77F2047E3E8004269E2 /* LTVideoManager */ = {
+			isa = PBXGroup;
+			children = (
+				FB2DD7822047E3E8004269E2 /* LTVideoManager.h */,
+				FB4A5F8B204E41240083F99D /* LTVideoManager.m */,
+				FB2DD7812047E3E8004269E2 /* LTVideoModel.h */,
+				FB2DD7832047E3E8004269E2 /* LTVideoModel.m */,
+			);
+			path = LTVideoManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +269,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB4A5F8A204D6B710083F99D /* LTVideoCollectionViewCell.xib in Resources */,
 				FB2DD7542047E3AC004269E2 /* LaunchScreen.storyboard in Resources */,
 				FB2DD7512047E3AC004269E2 /* Assets.xcassets in Resources */,
 				FB2DD74F2047E3AC004269E2 /* Main.storyboard in Resources */,
@@ -266,8 +298,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB2DD74C2047E3AC004269E2 /* ViewController.m in Sources */,
+				FB4A5F8C204E41240083F99D /* LTVideoManager.m in Sources */,
+				FB4A5F85204D6B5C0083F99D /* LTVideoListViewController.m in Sources */,
+				FB2DD7852047E3E8004269E2 /* LTVideoModel.m in Sources */,
 				FB2DD7572047E3AC004269E2 /* main.m in Sources */,
 				FB2DD7492047E3AC004269E2 /* AppDelegate.m in Sources */,
+				FB4A5F89204D6B710083F99D /* LTVideoCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4KWZZ3Q3N;
 				INFOPLIST_FILE = LTVideoSelectDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jonny..LTVideoSelectDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -447,6 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4KWZZ3Q3N;
 				INFOPLIST_FILE = LTVideoSelectDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jonny..LTVideoSelectDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
