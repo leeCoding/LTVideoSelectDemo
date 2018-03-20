@@ -30,7 +30,7 @@
     [selectBtn addTarget:self action:@selector(touchSelectImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:selectBtn];
     
-    NSLog(@"i master");
+    NSLog(@"i master fix bug");
 }
 
 - (void)touchSelectImage:(UIButton *)btn {
