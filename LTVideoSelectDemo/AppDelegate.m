@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "LTTestViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:[ViewController new]];
+    UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:[LTTestViewController new]];
     self.window.rootViewController = rootNav;
     
     return YES;

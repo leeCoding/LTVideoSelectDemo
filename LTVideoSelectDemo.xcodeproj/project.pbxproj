@@ -20,6 +20,7 @@
 		FB4A5F89204D6B710083F99D /* LTVideoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A5F86204D6B700083F99D /* LTVideoCollectionViewCell.m */; };
 		FB4A5F8A204D6B710083F99D /* LTVideoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB4A5F87204D6B710083F99D /* LTVideoCollectionViewCell.xib */; };
 		FB4A5F8C204E41240083F99D /* LTVideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB4A5F8B204E41240083F99D /* LTVideoManager.m */; };
+		FB87E4BC2060A2D20028C972 /* LTTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB87E4BB2060A2D20028C972 /* LTTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		FB4A5F87204D6B710083F99D /* LTVideoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LTVideoCollectionViewCell.xib; sourceTree = "<group>"; };
 		FB4A5F88204D6B710083F99D /* LTVideoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTVideoCollectionViewCell.h; sourceTree = "<group>"; };
 		FB4A5F8B204E41240083F99D /* LTVideoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTVideoManager.m; sourceTree = "<group>"; };
+		FB87E4BA2060A2D20028C972 /* LTTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LTTestViewController.h; sourceTree = "<group>"; };
+		FB87E4BB2060A2D20028C972 /* LTTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				FB2DD77F2047E3E8004269E2 /* LTVideoManager */,
 				FB2DD7472047E3AC004269E2 /* AppDelegate.h */,
 				FB2DD7482047E3AC004269E2 /* AppDelegate.m */,
+				FB87E4BA2060A2D20028C972 /* LTTestViewController.h */,
+				FB87E4BB2060A2D20028C972 /* LTTestViewController.m */,
 				FB4A5F83204D6B5B0083F99D /* LTVideoListViewController.h */,
 				FB4A5F84204D6B5B0083F99D /* LTVideoListViewController.m */,
 				FB4A5F88204D6B710083F99D /* LTVideoCollectionViewCell.h */,
@@ -297,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB87E4BC2060A2D20028C972 /* LTTestViewController.m in Sources */,
 				FB2DD74C2047E3AC004269E2 /* ViewController.m in Sources */,
 				FB4A5F8C204E41240083F99D /* LTVideoManager.m in Sources */,
 				FB4A5F85204D6B5C0083F99D /* LTVideoListViewController.m in Sources */,
