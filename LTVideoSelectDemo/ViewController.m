@@ -21,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"我是other 提交的分支");
+    NSLog(@"再次提交分支");
+
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIButton *selectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
