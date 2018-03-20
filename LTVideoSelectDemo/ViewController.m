@@ -29,6 +29,8 @@
     selectBtn.backgroundColor = [UIColor grayColor];
     [selectBtn addTarget:self action:@selector(touchSelectImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:selectBtn];
+    
+    NSLog(@"i master");
 }
 
 - (void)touchSelectImage:(UIButton *)btn {
