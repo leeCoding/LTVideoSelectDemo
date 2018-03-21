@@ -20,8 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"我是other 提交的分支");
-    NSLog(@"tag1提交");
+    NSLog(@"master 1");
 
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -32,7 +31,6 @@
     [selectBtn addTarget:self action:@selector(touchSelectImage:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:selectBtn];
     
-    NSLog(@"i master fix bug one more time");
 }
 
 - (void)touchSelectImage:(UIButton *)btn {
