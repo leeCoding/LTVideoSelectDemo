@@ -19,7 +19,8 @@
 
 @property (nonatomic,strong)UICollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray *resultAry;
-
+//@property (nonatomic,strong)UILabel *loadView;
+@property (nonatomic,strong)UIActivityIndicatorView *activityIndicatorView;
 @end
 
 @implementation LTVideoListViewController
@@ -81,12 +82,14 @@
     [rigthBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rigthBtn];
     
+    /*
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     leftBtn.frame = CGRectMake(0, 0, 44, 44);
     [leftBtn setTitle:@"返回" forState:0];
     leftBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     [leftBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
+    */
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     float width = (self.view.frame.size.width - (5 * 5 )) / 4;
@@ -103,6 +106,14 @@
     [self.collectionView registerNib:[UINib nibWithNibName:@"LTVideoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
     [self.view addSubview:self.collectionView];
     
+    float lt_width = self.view.frame.size.width;
+    float height = self.view.frame.size.height;
+  
+    self.activityIndicatorView = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    self.activityIndicatorView.frame = CGRectMake((lt_width - 60) / 2, (height - 30) / 2, 60, 30);
+    self.activityIndicatorView.color = [UIColor blueColor];
+    [self.view addSubview:self.activityIndicatorView];
+
 }
 
 #pragma mark -
@@ -123,7 +134,8 @@
     LTVideoModel *model = self.resultAry[indexPath.row];
     NSLog(@" 选择的图片%@ 视频长度 %@",model.image,model.timeLength);
     model.image = [UIImage imageNamed:@"wb_pic"];
-    
+    [self.activityIndicatorView startAnimating];
+
 //    if (model.isGreater) {
 //
 ////        [self showStatus:@"请选择10分钟之内的视频！"];
@@ -140,6 +152,8 @@
                 if ([self.delegate respondsToSelector:@selector(selectedVideoWithModel:model:)]) {
                     [self.delegate selectedVideoWithModel:self model:model];
                     [self hide];
+                    [self.activityIndicatorView stopAnimating];
+                    [self.activityIndicatorView setHidesWhenStopped:YES];
                 }
             });
         }];
