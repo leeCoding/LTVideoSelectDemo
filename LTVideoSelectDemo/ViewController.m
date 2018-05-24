@@ -20,7 +20,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"master 1");
 
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -41,8 +40,9 @@
     [self.navigationController presentViewController:navigationcontroller animated:YES completion:nil];
 }
 
+#pragma mark - LTVideoListViewControllerDelegate
 - (void)selectedVideoWithModel:(LTVideoListViewController *)videoList model:(LTVideoModel *)videoModel {
-    
+    NSLog(@"选择视频之后的回调 %@",videoModel);
 }
 
 - (void)didReceiveMemoryWarning {

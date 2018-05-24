@@ -9,7 +9,6 @@
 #import "LTVideoListViewController.h"
 #import "LTVideoCollectionViewCell.h"
 #import "LTVideoManager.h"
-//#import "UIViewController+Units.h"
 
 @interface LTVideoListViewController ()
 <
@@ -19,7 +18,6 @@
 
 @property (nonatomic,strong)UICollectionView *collectionView;
 @property (nonatomic,strong)NSMutableArray *resultAry;
-//@property (nonatomic,strong)UILabel *loadView;
 @property (nonatomic,strong)UIActivityIndicatorView *activityIndicatorView;
 @end
 
@@ -82,15 +80,6 @@
     [rigthBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rigthBtn];
     
-    /*
-    UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, 0, 44, 44);
-    [leftBtn setTitle:@"返回" forState:0];
-    leftBtn.titleLabel.font = [UIFont systemFontOfSize:12];
-    [leftBtn addTarget:self action:@selector(hide) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:leftBtn];
-    */
-    
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     float width = (self.view.frame.size.width - (5 * 5 )) / 4;
     [layout setItemSize:CGSizeMake(width, width)];
@@ -136,14 +125,15 @@
     model.image = [UIImage imageNamed:@"wb_pic"];
     [self.activityIndicatorView startAnimating];
 
-//    if (model.isGreater) {
-//
-////        [self showStatus:@"请选择10分钟之内的视频！"];
-//        NSLog(@"请选择十分钟之内的视频");
-//        return;
-//    } else {
-//        NSLog(@" 小于十分钟内的 ");
-//    }
+    /*
+    if (model.isGreater) {
+
+        NSLog(@"请选择十分钟之内的视频");
+        return;
+    } else {
+        NSLog(@" 小于十分钟内的 ");
+    }
+    */
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[LTVideoManager shareImageManager] getVideoCover:model returnImage:^(UIImage *image) {
