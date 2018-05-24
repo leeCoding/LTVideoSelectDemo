@@ -20,7 +20,7 @@
     
     UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:[ViewController new]];
     self.window.rootViewController = rootNav;
-    
+    NSLog(@"this is master_a");
     return YES;
 }
 

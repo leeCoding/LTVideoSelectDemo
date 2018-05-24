@@ -89,7 +89,7 @@
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width,  self.view.frame.size.height) collectionViewLayout:layout];
     self.collectionView.dataSource  = self;
     self.collectionView.delegate = self;
-    self.collectionView.scrollEnabled = NO;
+    self.collectionView.scrollEnabled = YES;
     self.collectionView.contentInset = UIEdgeInsetsMake(5, 5, 5, 5);
     self.collectionView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self.collectionView registerNib:[UINib nibWithNibName:@"LTVideoCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
