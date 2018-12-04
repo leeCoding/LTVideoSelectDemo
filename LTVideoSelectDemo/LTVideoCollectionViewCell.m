@@ -19,7 +19,7 @@ static CGFloat LTScreenWidth;
     
     LTScreenWidth = [UIScreen mainScreen].bounds.size.width;
     LTScreenScale = 2.0;
-
+    self.videoImageView.contentMode = UIViewContentModeScaleAspectFit;
     if (LTScreenWidth>700) {
         LTScreenScale = 3.0;
     }
